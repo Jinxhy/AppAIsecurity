@@ -1,0 +1,14 @@
+"com.campmobile.snow/tassets/M_SenseME_Face_Video_5.3.3.model/tSenseTime/tboth/t0/n"
+"com.campmobile.snow/tassets/M_SenseME_Face_Extra_5.5.0.model/tSenseTime/tboth/t0/n"
+"com.campmobile.snow/tassets/M_SenseME_Face_Picture_5.3.3.model/tSenseTime/tboth/t0/n"
+
+
+model_xsl = '''com.campmobile.snow\tassets/M_SenseME_Face_Video_5.3.3.model\tSenseTime\tboth\t0\n",
+    "com.campmobile.snow\tassets/M_SenseME_Face_Extra_5.5.0.model\tSenseTime\tboth\t0\n",
+    "com.campmobile.snow\tassets/M_SenseME_Face_Picture_5.3.3.model\tSenseTime\tboth\t0\n",
+    "com.campmobile.snow\tassets/M_SenseME_Iris_1.10.1.model\tSenseTime\tboth\t0\n",
+    "com.campmobile.snow\tassets/vision_face_x_1.0.0.model\tSenseTime\tboth\t0\n",
+    "com.campmobile.snow\tassets/M_SenseME_Hand_5.4.0.model\tSenseTime\tboth\t0\n",
+    "com.campmobile.snow\tassets/M_Segment_4x_Hair_1.1.0_v2_origin.model\tSenseTime\tboth\t0\n",
+    "com.campmobile.snow\tassets/M_SenseME_Body_Contour_73_1.2.0.model\tSenseTime\tboth\t0\n",
+    "com.campmobile.snow\tassets/M_SenseME_Body_Four_1.0.0.model\tSenseTime\tboth\t0\n"'''

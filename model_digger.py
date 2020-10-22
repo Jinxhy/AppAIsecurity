@@ -2,14 +2,13 @@ import os
 import shutil
 from tqdm import tqdm
 
-original = './temp/TFLite'
+original = './DL_apps/TFLite'
 
-target = './DL_models/temp'
+target = './DL_models/extracted'
 
 end_with = '.tflite'
 
-# total 307(164) .tflite models
-model_count = 267
+model_count = 0
 
 for cat_name in os.listdir(original):
     cat_dir = os.path.join(original, cat_name)
@@ -30,4 +29,4 @@ for cat_name in os.listdir(original):
                         shutil.copy2(model_path, copy_path)
                         model_count += 1
 
-print('\nExtract ' + str(model_count) + end_with + ' DL models.')
+print('\nExtract ' + str(model_count) + end_with + 'TFLite models.')

@@ -1,9 +1,6 @@
 """
 Written by Yujin Huang(Jinx)
-Started 24/07/2020 10:17 pm
-Last Editted 
 
-Description of the purpose of the code
 """
 
 import os
@@ -27,24 +24,24 @@ class Layer:
 def load_db():
     db = []
 
-    for model_name in os.listdir("DL_models/v2/"):
+    for model_name in os.listdir("DL_models/TF_Hub/"):
 
         try:
             # Load TFLite model and allocate tensors.
-            interpreter = tf.lite.Interpreter("DL_models/v2/" + model_name)
+            interpreter = tf.lite.Interpreter("DL_models/TF_Hub/" + model_name)
             interpreter.allocate_tensors()
         except:
             print(model_name, "loading error")
             continue
 
-        # Get tensor details.
+
         details = interpreter.get_tensor_details()
 
-        # init pre-trained model
+
         layers = []
         model = Model(model_name, layers)
 
-        # MobileNets,
+
         for detail in details:
             shape = re.sub(' +', ',', str(detail['shape']))[:1] + re.sub(' +', ',', str(detail['shape']))[2:]
             layer = Layer(detail['name'], str(detail['index']), shape,
@@ -58,49 +55,25 @@ def load_db():
     return db
 
 
-def load_single_target_model(model_path):
-    # Load TFLite model and allocate tensors.
-    interpreter = tf.lite.Interpreter(model_path)
-    interpreter.allocate_tensors()
-
-    # Get tensor details.
-    details = interpreter.get_tensor_details()
-
-    layers = []
-    target_model = Model(model_path.rsplit("/", 1)[-1], layers)
-
-    for detail in details:
-        shape = re.sub(' +', ',', str(detail['shape']))[:1] + re.sub(' +', ',', str(detail['shape']))[2:]
-        layer = Layer(detail['name'], str(detail['index']), shape,
-                      re.sub(' +', ',', str(detail['dtype'])))
-
-        layers.append(layer.detail)
-
-        target_model.layers = layers
-
-    return target_model
-
-
 def load_target_models():
     targets = []
 
-    for model_name in os.listdir("DL_models/v2para_check/"):
+    for model_name in os.listdir("DL_models/fine_tuned/"):
         # Load TFLite model and allocate tensors.
         try:
-            interpreter = tf.lite.Interpreter("DL_models/v2para_check/" + model_name)
+            interpreter = tf.lite.Interpreter("DL_models/fine_tuned/" + model_name)
             interpreter.allocate_tensors()
         except:
             print(model_name, "loading error")
             continue
 
-        # Get tensor details.
         details = interpreter.get_tensor_details()
 
-        # init pre-trained model
+
         layers = []
         model = Model(model_name, layers)
 
-        # MobileNets,
+
         for detail in details:
             shape = re.sub(' +', ',', str(detail['shape']))[:1] + re.sub(' +', ',', str(detail['shape']))[2:]
             layer = Layer(detail['name'], str(detail['index']), shape,
@@ -117,10 +90,8 @@ def load_target_models():
 def main():
     tf_hub_db = load_db()
     targets = load_target_models()
-    # target_model = load_single_target_model("DL_models/TFLite/mobilenet.letgo.v1_1.0_224_quant.v7.tflite")
-    # target_model_layers = target_model.layers
 
-    # compute the similarity
+    # compute the structural similarity
     for target in targets:
         results = {}
 

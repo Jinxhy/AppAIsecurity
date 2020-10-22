@@ -1,9 +1,6 @@
 """
 Written by Yujin Huang(Jinx)
-Started 24/07/2020 10:17 pm
-Last Editted 
 
-Description of the purpose of the code
 """
 
 import os
@@ -29,24 +26,21 @@ class Layer:
 def load_db():
     db = []
 
-    for model_name in os.listdir("DL_models/v2/"):
+    for model_name in os.listdir("TF_Hub"):
 
         try:
             # Load TFLite model and allocate tensors.
-            interpreter = tf.lite.Interpreter("DL_models/v2/" + model_name)
+            interpreter = tf.lite.Interpreter("TF_Hub/" + model_name)
             interpreter.allocate_tensors()
         except:
             print(model_name, "loading error")
             continue
 
-        # Get tensor details.
         details = interpreter.get_tensor_details()
 
-        # init pre-trained model
         layers = []
         model = Model(model_name, layers)
 
-        # MobileNets,
         for detail in details:
             layer_details = interpreter.get_tensor(detail['index'])
 
@@ -67,23 +61,20 @@ def load_db():
 def load_target_models():
     targets = []
 
-    for model_name in os.listdir("DL_models/v2para_check/"):
+    for model_name in os.listdir("DL_models/extracted/"):
         # Load TFLite model and allocate tensors.
         try:
-            interpreter = tf.lite.Interpreter("DL_models/v2para_check/" + model_name)
+            interpreter = tf.lite.Interpreter("DL_models/extracted/" + model_name)
             interpreter.allocate_tensors()
         except:
             print(model_name, "loading error")
             continue
 
-        # Get tensor details.
         details = interpreter.get_tensor_details()
 
-        # init pre-trained model
         layers = []
         model = Model(model_name, layers)
 
-        # MobileNets,
         for detail in details:
             layer_details = interpreter.get_tensor(detail['index'])
 
@@ -104,10 +95,8 @@ def load_target_models():
 def main():
     tf_hub_db = load_db()
     targets = load_target_models()
-    # target_model = load_single_target_model("DL_models/TFLite/mobilenet.letgo.v1_1.0_224_quant.v7.tflite")
-    # target_model_layers = target_model.layers
 
-    # compute the similarity
+    # compute the parameter similarity
     for target in targets:
         print(target.name)
         for model in tf_hub_db:

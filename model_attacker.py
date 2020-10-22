@@ -6,14 +6,9 @@ import sys
 import shutil
 import os
 
-# display all numpy array
-np.set_printoptions(threshold=sys.maxsize)
 
 # Load TFLite model and allocate tensors.
-# TF_Hub/mobilenet_v2_1.0_224_quantized_1_metadata_1.tflite
-# DL_models/transfer/mobile_ica_8bit_v2.tflite
-# interpreter = tf.lite.Interpreter(model_path="TF_Hub/mobilenet_v2_1.0_224_1_metadata_1.tflite")
-interpreter = tf.lite.Interpreter(model_path='DL_models/transfer/converted_model.tflite')
+interpreter = tf.lite.Interpreter(model_path='DL_models/fine_tuned/converted_model.tflite')
 interpreter.allocate_tensors()
 
 # Get input and output tensors.
@@ -34,10 +29,9 @@ def inference(image_path, copy):
         # read and resize the image
         img = cv2.imread(r"{}".format(file.resolve()))
         new_img = cv2.resize(img, (224, 224))
+
         # if the input requires float32
         new_img = new_img.astype(np.float32) / 255
-        # print(type(new_img))
-        # print(new_img)
 
         # input_details[0]['index'] = the index which accepts the input
         interpreter.set_tensor(input_details[0]['index'], [new_img])
@@ -52,8 +46,6 @@ def inference(image_path, copy):
         max_pro_index = list(np.where(output_data[0] == np.amax(output_data[0])))
 
         output_labels.append(max_pro_index[0][0])
-
-        # print(file, max_pro_index[0][0])
 
         # copy to foolbox directory as raw image
         if copy:
@@ -76,10 +68,8 @@ def success_rate(raw, adv):
 
 
 def main():
-    # attacks = 'adv_examples/mobile_ica_8bit_v2/attacks'
-    attacks = 'adv_examples/converted_model/resnet'
+    attacks = 'adv_examples/converted_model/attacks'
     ori_labels = inference('adv_examples/converted_model/raw', False)
-    # print(ori_labels)
 
     for attack_name in os.listdir(attacks):
         attack_dir = os.path.join(attacks, attack_name)

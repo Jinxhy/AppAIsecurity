@@ -69,7 +69,7 @@ For each selected model, according to its functionality, we manually find 10 ran
 Fig 8 shows the comparative results of targeted adversarial attack and blind adversarial attack. In every model’s column, the left side T is the result of targeted attacks, and the right side B is the result of blind attacks. The better results are blackened. The last two columns are the average success rate of targeted and blind attacks.
 <p align="center">
   <img  src="figures/results.png" width="60%" height="60%"><br/>
-  <em>Fig. 8. Results of targeted and blind attacks.</em>
+  <em>Fig. 7. Results of targeted and blind attacks.</em>
 </p>
 
 We adopt the Pearson correlation coefficient to examine if the correlation exists between them. Fig 8 shows the relationship between the model similarity and attack performance.

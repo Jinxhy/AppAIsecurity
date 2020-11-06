@@ -46,7 +46,7 @@ We check the similarity of each extracted model in our collection with models in
 </p>
 
 
-The numbers of identified fine-tuned TFLite DL models is shown in Fig 5.
+The numbers of identified fine-tuned TFLite models is shown in Fig 5.
 <p align="center">
   <img  src="figures/no_fine_tuned.png" width="50%" height="50%"><br/>
   <em>Fig. 5. Numbers of fine-tuned TFLite DL models.</em>

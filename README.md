@@ -10,7 +10,7 @@ In this study, we propose __a simple but effective approach to hack deep learnin
 To demonstrate our task, we first show some common mobile and edge use cases achieved via on-device model inference, as shown in Fig 1.
 
 <p align="center">
-  <img  src="figures/use_cases.png" width="80%" height="80%">
+  <img  src="figures/use_cases.png" width="95%" height="95%"><br/>
   <em>Fig. 1. Optimized on-device deep learning models for common mobile and edge use cases from https://www.tensorflow.org/lite/models.</em>
 </p>
 
@@ -27,4 +27,7 @@ For the preparation of our study, we crawled 62,822 mobile apps across various c
 
 ### RQ1: HOW SIMILAR ARE TFLITE MODELS USED IN MOBILE APPS?
 
-![model realtions](figures/model_relations.jpg){:height="50%" width="50%"}*Fig. 2. Relations between TFLite models*
+<p align="center">
+  <img  src="figures/model_relations.jpg" width="75%" height="75%"><br/>
+  <em>Fig. 2. Relations between TFLite models.</em>
+</p>

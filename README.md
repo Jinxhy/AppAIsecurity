@@ -24,4 +24,4 @@ For the preparation of our study, we crawled 62,822 mobile apps across various c
 
 ### RQ1: HOW SIMILAR ARE TFLITE MODELS USED IN MOBILE APPS?
 
-![user_cases](figures/model_relations.png)*Fig. 1. Optimized on-device deep learning models for common mobile and edge use cases from https://www.tensorflow.org/lite/models*
+![user_cases](figures/model_relation.png)*Fig. 2. Relations between TFLite models*

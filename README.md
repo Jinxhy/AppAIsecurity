@@ -64,3 +64,17 @@ We pick up 10 representative models that are all fine-tuned from MobileNet V1 an
 
 ### Dataset preparing
 For each selected model, according to its functionality, we manually find 10 random images from the Internet as the original input. Fig 7 shows the details of dataset for the one of selected models.
+
+### Evaluation
+Fig 8 shows the comparative results of targeted adversarial attack and blind adversarial attack. In every model’s column, the left side T is the result of targeted attacks, and the right side B is the result of blind attacks. The better results are blackened. The last two columns are the average success rate of targeted and blind attacks.
+<p align="center">
+  <img  src="figures/results.png" width="60%" height="60%"><br/>
+  <em>Fig. 8. Results of targeted and blind attacks.</em>
+</p>
+
+We adopt the Pearson correlation coefficient to examine if the correlation exists between them. Fig 8 shows the relationship between the model similarity and attack performance.
+<p align="center">
+  <img  src="figures/sim_perf.jpg" width="50%" height="50%"><br/>
+  <em>Fig. 8. Relationship of similarity and attack performance (the dot line is the fitted line).</em>
+</p>
+

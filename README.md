@@ -29,10 +29,38 @@ For the preparation of our study, we crawled 62,822 mobile apps across various c
   <em>Fig. 2. Numbers of TFLite DL apps and models.</em>
 </p>
 
-### RQ1: HOW SIMILAR ARE TFLITE MODELS USED IN MOBILE APPS?
-We adopt the Community Detection for visualizing the overall relationships among models from different apps. Fig 3 shows different communities with different colors and the edges with higher similarity as large thickness.
 
+## RQ1: HOW SIMILAR ARE TFLITE MODELS USED IN MOBILE APPS?
+We adopt the Community Detection for visualizing the overall relationships among models from different apps. Fig 3 shows different communities with different colors and the edges with higher similarity as large thickness.
 <p align="center">
   <img  src="figures/model_relations.jpg" width="70%" height="70%"><br/>
   <em>Fig. 3. Relations between TFLite models.</em>
 </p>
+
+
+## RQ2: HOW WIDELY PRE-TRAINED TFLITE MODELS ARE ADOPTED?
+We check the similarity of each extracted model in our collection with models in [TensorFlow Hub](https://tfhub.dev/s?deployment-format=lite&module-type=image-classification,image-object-detection,image-pose-detection,image-segmentation,image-style-transfer&subtype=module,placeholder) in terms of the structural and parameter similarity. Fig 4 shows the similarity distribution of models from mobile apps and those from TensorFlow Hub.
+<p align="center">
+  <img  src="figures/distribution.png" width="50%" height="50%"><br/>
+  <em>Fig. 4. Distributions of similarities of fine-tuned and pretrained models.</em>
+</p>
+
+
+The numbers of identified fine-tuned TFLite DL models is shown in Fig 5.
+<p align="center">
+  <img  src="figures/no_fine_tuned.png" width="50%" height="50%"><br/>
+  <em>Fig. 5. Numbers of fine-tuned TFLite DL models.</em>
+</p>
+
+## RQ3: HOW ROBUST ARE FINE-TUNED TFLITE MODELS AGAINST ADVERSARIAL ATTACKS?
+The last 2 research questions demonstrate that the pretrained models and fine-tuning approach are widely used in developing real-world on-device deep learning models. Considering the availability of identifying the pre-trained models, we propose a method called ModelAttacker to attack the deep learning model based on the identification of its pre-trained model.
+
+### Model selection
+We pick up 10 representative models that are all fine-tuned from MobileNet V1 and MobileNet V2 as they are most commonly used, and utilize ModelAttacker to employ selected 11 kinds of adversarial attacks on these TFLite models. Fig 6 shows the detail of selected 10 models.
+<p align="center">
+  <img  src="figures/10models.png" width="60%" height="60%"><br/>
+  <em>Fig. 6. Details of selected 10 models.</em>
+</p>
+
+### Dataset preparing
+For each selected model, according to its functionality, we manually find 10 random images from the Internet as the original input. Fig 7 shows the detail of dataset for the one of selected models.

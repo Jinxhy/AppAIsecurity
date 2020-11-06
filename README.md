@@ -74,7 +74,7 @@ Fig 8 shows the comparative results of targeted adversarial attack and blind adv
 
 We adopt the Pearson correlation coefficient to examine if the correlation exists between them. Fig 8 shows the relationship between the model similarity and attack performance.
 <p align="center">
-  <img  src="figures/sim_perf.jpg" width="50%" height="50%"><br/>
+  <img  src="figures/sim_perf.jpg" width="45%" height="45%"><br/>
   <em>Fig. 8. Relationship of similarity and attack performance (the dot line is the fitted line).</em>
 </p>
 

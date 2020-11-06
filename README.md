@@ -7,3 +7,6 @@ Compared to offloading deep learning from smartphones to the cloud, performing m
 In this study, we propose __a simple but effective approach to hack deep learning models with adversarial attacks by identifying their highly similar pre-trained models from TensorFlow Hub__. All 10 real-world Android apps in the experiment are successfully attacked by our approach. Apart from the feasibility of the model attack, we also carry out an empirical study to investigate the characteristic of deep learning models of hundreds of Android apps from Google Play. The results show that many of them are similar to each other and widely use fine-tuning techniques to pre-trained models on the Internet.
 
 ## Details
+To demonstrate our task, we first show some common mobile and edge use cases achieved via on-device model inference.
+
+![img_classification](figures/android_banana.png)

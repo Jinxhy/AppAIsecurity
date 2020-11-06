@@ -9,8 +9,4 @@ In this study, we propose __a simple but effective approach to hack deep learnin
 ## Details
 To demonstrate our task, we first show some common mobile and edge use cases achieved via on-device model inference.
 
-<figure>
-  <img src="figures/use_cases.png" width="1100" />
-  <figcaption>Fig. 1. An example design from the design sharing</figcaption>
-</figure>
-
+![user_cases](figures/use_cases.png)*Fig. 1. Optimized on-device deep learning models for common mobile and edge use cases from https://www.tensorflow.org/lite/models*

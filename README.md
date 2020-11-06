@@ -9,7 +9,7 @@ In this study, we propose __a simple but effective approach to hack deep learnin
 ## Details
 To demonstrate our task, we first show some common mobile and edge use cases achieved via on-device model inference, as shown in Fig 1.
 
-![user_cases](figures/use_cases.png)*Fig. 1. Optimized on-device deep learning models for common mobile and edge use cases from https://www.tensorflow.org/lite/models*
+![user cases](figures/use_cases.png)*Fig. 1. Optimized on-device deep learning models for common mobile and edge use cases from https://www.tensorflow.org/lite/models*
 
 Unlike the central guardians of the cloud server, on-device models may be more vulnerable inside users’ phones. For instance, most model files can be obtained by decompiling Android apps without any obfuscation or encryption. Such model files may be exposed to malicious attacks like adversarial attack. Considering the fact that many mobile apps with deep learning models are used for important tasks such as finance, social or even life-critical tasks like medical, driving-assistant, attacking the models inside those apps will be a disaster for users.
 
@@ -24,4 +24,4 @@ For the preparation of our study, we crawled 62,822 mobile apps across various c
 
 ### RQ1: HOW SIMILAR ARE TFLITE MODELS USED IN MOBILE APPS?
 
-![user_cases](figures/model_relations.jpg)*Fig. 2. Relations between TFLite models*
+![model realtions](figures/model_relations.jpg){:height="50%" width="50%"}*Fig. 2. Relations between TFLite models*

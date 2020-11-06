@@ -63,7 +63,7 @@ We pick up 10 representative models that are all fine-tuned from MobileNet V1 an
 </p>
 
 ### Dataset preparing
-For each selected model, according to its functionality, we manually find 10 random images from the Internet as the original input. Fig 7 shows the details of dataset for the one of selected models.
+For each selected model, according to its functionality, we manually find 10 random images from the Internet as the original input. Fig 7 shows the details of dataset for one of the selected models.
 <p align="center">
   <img  src="figures/ddfasfdfas.jpg" width="45%" height="45%"><br/>
   <em>Fig. 7. </em>

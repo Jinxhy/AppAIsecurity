@@ -63,10 +63,10 @@ We pick up 10 representative models that are all fine-tuned from MobileNet V1 an
 </p>
 
 ### Dataset preparing
-For each selected model, according to its functionality, we manually find 10 random images from the Internet as the original input. Fig 7 shows the details of dataset for one of the selected models.
+For each selected model, according to its functionality, we manually find 10 random images from the Internet as the original input. Fig 7 shows the details of the dataset for one of the selected models.
 <p align="center">
   <img  src="figures/model_input.png" width="60%" height="60%"><br/>
-  <em>Fig. 7. </em>
+  <em>Fig. 7. The original input for mobilenet.letgo.v1 1.0 224 quant.v7.tflite</em>
 </p>
 
 ### Evaluation

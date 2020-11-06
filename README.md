@@ -25,7 +25,7 @@ In this work, we design a simple but effective way to adapt existing adversarial
 ### Dataset
 For the preparation of our study, we crawled 62,822 mobile apps across various categories (e.g., Photograph, Social, Shopping) related to the image domain from Google Play. The identified TFLite deep learning apps and corresponding TFLite models are shown in Fig 2.
 <p align="center">
-  <img  src="figures/table1.jpg" width="70%" height="70%"><br/>
+  <img  src="figures/table1.png" width="50%" height="50%"><br/>
   <em>Fig. 2. Numbers of TFLite DL apps and models.</em>
 </p>
 

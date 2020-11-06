@@ -9,4 +9,4 @@ In this study, we propose __a simple but effective approach to hack deep learnin
 ## Details
 To demonstrate our task, we first show some common mobile and edge use cases achieved via on-device model inference.
 
-![img_classification](figures/use_cases.png)
+<img src="figures/use_cases.png" width="1000" />

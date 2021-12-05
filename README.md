@@ -84,3 +84,11 @@ We adopt the Pearson correlation coefficient to examine if the correlation exist
 </p>
 
 ## Citation
+@inproceedings{huang2021robustness,
+  title={Robustness of on-device models: Adversarial attack to deep learning models on android apps},
+  author={Huang, Yujin and Hu, Han and Chen, Chunyang},
+  booktitle={2021 IEEE/ACM 43rd International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)},
+  pages={101--110},
+  year={2021},
+  organization={IEEE}
+}

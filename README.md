@@ -3,7 +3,7 @@
 ## RESOURCE
 - Paper: [arXiv](https://arxiv.org/abs/2101.04401), [IEEE/ACM](https://ieeexplore.ieee.org/document/9402124)
 - Video: [YouTube](https://www.youtube.com/watch?v=fSB1gE9cNjY&t=646s)
-- Chinese blog: []
+- Chinese blog: [jiqizhixin](https://www.jiqizhixin.com/articles/2021-01-26-4)
 
 ## INTRODUCTION
 Deep learning has shown its power in many applications, including object detection in images, natural-language understanding, speech recognition. To make it more accessible to

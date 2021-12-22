@@ -3,7 +3,7 @@
 Deep learning has shown its power in many applications, including object detection in images, natural-language understanding, speech recognition. To make it more accessible to
 end-users, many deep learning models are embedded in mobile apps. 
 
-Compared to offloading deep learning from smartphones to the cloud, performing machine learning on-device can help improve latency, connectivity, and power consumption. However, __most deep learning models within Android apps can be easily obtained via mature reverse engineering, and the model exposure may invite adversarial attacks__. 
+Compared to offloading deep learning from smartphones to the cloud, performing machine learning on-device can help improve latency, connectivity, and power consumption. __However, most deep learning models within Android apps can be easily obtained via mature reverse engineering, and the model exposure may invite adversarial attacks__. 
 
 __In this study, we propose a simple but effective approach to hack deep learning models with adversarial attacks by identifying their highly similar pre-trained models from TensorFlow Hub__. All 10 real-world Android apps in the experiment are successfully attacked by our approach. Apart from the feasibility of the model attack, we also carry out an empirical study to investigate the characteristic of deep learning models of hundreds of Android apps from Google Play. The results show that many of them are similar to each other and widely use fine-tuning techniques to pre-trained models on the Internet.
 

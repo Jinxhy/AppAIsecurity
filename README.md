@@ -1,19 +1,17 @@
 # Robustness of on-device Models: AdversarialAttack to Deep Learning Models on Android Apps
 ## *Accepted to ICSE-2021-SEIP*
-## Resource
+## RESOURCE
 - Paper: [arXiv](https://arxiv.org/abs/2101.04401), [IEEE/ACM](https://ieeexplore.ieee.org/document/9402124)
 - Video: [YouTube](https://www.youtube.com/watch?v=fSB1gE9cNjY&t=646s)
 - Chinese blog: []
 
-## Introduction
-
+## INTRODUCTION
 Deep learning has shown its power in many applications, including object detection in images, natural-language understanding, speech recognition. To make it more accessible to
 end-users, many deep learning models are embedded in mobile apps. 
 
 Compared to offloading deep learning from smartphones to the cloud, performing machine learning on-device can help improve latency, connectivity, and power consumption. __However, most deep learning models within Android apps can be easily obtained via mature reverse engineering, and the model exposure may invite adversarial attacks__. 
 
 __In this study, we propose a simple but effective approach to hack deep learning models with adversarial attacks by identifying their highly similar pre-trained models from TensorFlow Hub__. All 10 real-world Android apps in the experiment are successfully attacked by our approach. Apart from the feasibility of the model attack, we also carry out an empirical study to investigate the characteristic of deep learning models of hundreds of Android apps from Google Play. The results show that many of them are similar to each other and widely use fine-tuning techniques to pre-trained models on the Internet.
-
 
 To demonstrate our task, we first show some common mobile and edge use cases achieved via on-device model inference, as shown in Fig 1.
 
@@ -30,7 +28,7 @@ In this work, we design a simple but effective way to adapt existing adversarial
 - How widely pre-trained TFLite models are adopted?
 - How robust are fine-tuned TFLite models against adversarial attacks?
 
-### Dataset
+### DATASET
 For the preparation of our study, we crawled 62,822 mobile apps across various categories (e.g., Photograph, Social, Shopping) related to the image domain from Google Play. The identified TFLite deep learning apps and corresponding TFLite models are shown in Fig 2.
 <p align="center">
   <img  src="figures/iden_apps_models.png" width="50%" height="50%"><br/>
@@ -63,21 +61,21 @@ The numbers of identified fine-tuned TFLite models is shown in Fig 5.
 ## RQ3: HOW ROBUST ARE FINE-TUNED TFLITE MODELS AGAINST ADVERSARIAL ATTACKS?
 The last 2 research questions demonstrate that the pretrained models and fine-tuning approach are widely used in developing real-world on-device deep learning models. Considering the availability of identifying the pre-trained models, we propose a method called ModelAttacker to attack the deep learning model based on the identification of its pre-trained model.
 
-### Model selection
+### MODEL SELECTION
 We pick up 10 representative models that are all fine-tuned from MobileNet V1 and MobileNet V2 as they are most commonly used, and utilize ModelAttacker to employ selected 11 kinds of adversarial attacks on these TFLite models. Fig 6 shows the detail of selected 10 models.
 <p align="center">
   <img  src="figures/selected_models.png" width="60%" height="60%"><br/>
   <em>Fig. 6. Details of selected 10 models.</em>
 </p>
 
-### Dataset preparing
+### DATASET PREPARING
 For each selected model, according to its functionality, we manually find 10 random images from the Internet as the original input. Fig 7 shows the details of the dataset for one of the selected models.
 <p align="center">
   <img  src="figures/model_input.png" width="100%" height="100%"><br/>
   <em>Fig. 7. The original input for mobilenet.letgo.v1 1.0 224 quant.v7.tflite</em>
 </p>
 
-### Evaluation
+### EVALUATION
 Fig 8 shows the comparative results of targeted adversarial attack and blind adversarial attack. In every model’s column, the left side T is the result of targeted attacks, and the right side B is the result of blind attacks. The better results are blackened. The last two columns are the average success rate of targeted and blind attacks.
 <p align="center">
   <img  src="figures/results.png" width="60%" height="60%"><br/>
@@ -90,7 +88,7 @@ We adopt the Pearson correlation coefficient to examine if the correlation exist
   <em>Fig. 9. Relationship of similarity and attack performance (the dot line is the fitted line).</em>
 </p>
 
-## Citation
+## CITATION
 ```
 @inproceedings{huang2021robustness,
   title={Robustness of on-device models: Adversarial attack to deep learning models on android apps},
